@@ -12,7 +12,7 @@ module.exports = (req, res, next) => {
         if (err) {
           next({
             apiCode: 401,
-            apiMessage: 'Invalid or missing credentials',
+            apiMessage: 'You shall not pass!',
           });
         } else {
           req.decodedToken = decodedToken;
@@ -22,7 +22,7 @@ module.exports = (req, res, next) => {
     } else {
       next({
         apiCode: 401,
-        apiMessage: 'Invalid or missing credentials',
+        apiMessage: 'You shall not pass!',
       });
     }
   } catch (err) {
